@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    scroll-behavior: smooth;
+}
+
+.header{
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar{
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgb(119, 36, 84);
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    padding: 0 1rem;
+}
+.logo{
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0 1rem;
+    margin: .3rem 0 .5rem 1rem;
+    z-index: 10;
+    width: 50px;
+    height: 46px;
+}
+.logo-img{
+    width: 45px;
+    border-radius: 50%;
+    height: 40px;
+}
+
+.nav-list{
+    margin-left: 40rem;
+    display: flex;
+    margin-top: .5rem;
+    list-style: none;
+}
+@media  screen  and (max-width: 900px) {
+    .navbar{
+        position: relative;
+        padding: 0;
+        position: fixed;
+    }
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        margin: 3.5rem 0 ;
+        background: rgb(119, 36, 84);
+        height: 30vh;
+        width: 100%;
+        text-align: center;
+        display: none;
+        z-index: 1000;
+        transition: all .3s ease-in-out;
+    }
+    .open .nav-list{
+        display: block;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .navbar{
+        position: relative;
+        padding: 0;
+        position: fixed;
+    }
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        margin: 3.5rem 0 ;
+        background: rgb(119, 36, 84);
+        height: 30vh;
+        width: 100%;
+        text-align: center;
+        display: none;
+        z-index: 1000;
+        transition: all .3s ease-in-out;
+    }
+    .open .nav-list{
+        display: block;
+    }
+}
+
+
+.list-item,
+.follow-item {
+    margin: 0 2rem;
+}
+
+.nav-link,
+.follow-link{
+    text-decoration: none;
+    color: rgb(0, 195, 255);
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .nav-link, .follow-link{
+font-size: 2rem;
+    }
+}
+.nav-link:hover, .follow-link:hover{
+    color: red;
+}
+
+.follow-list{
+    display: flex;
+    list-style: none;
+}
+@media  screen  and (max-width: 700px) {
+    .follow-list{
+        text-align: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .follow-list{
+        text-align: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+.menu-toggler{
+    color: white;
+    margin: 1rem 0 0 2rem;
+    cursor: pointer;
+    display: none;
+}
+@media  screen  and (max-width: 700px) {
+    .menu-toggler{
+        margin-left: auto;
+        padding-right: .8rem;
+        display: block;
+    }
+}
+@media  (min-width: 650px) and (max-width: 1300px) {
+    .menu-toggler{
+        margin-left: auto;
+        padding-right: 2rem;
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+.menu-toggler:hover{
+    color: red;
+}
+
+.container{
+    padding: 3rem;
+}
+@media  screen  and (max-width: 700px) {
+    .container{
+        padding: 2rem;
+    }
+}
+
+
+/* hero section */
+.hero{
+    height: 80vh;
+    background: url("/batery-bg.jpeg") center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+@media  screen  and (max-width: 700px) {
+    .hero{
+        height: 60vh;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .hero{
+        height: 60vh;
+    }
+}
+.battery-welcome-text{
+    margin-top: 4rem;
+    color: white;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+@media  screen  and (max-width: 700px) {
+    .battery-welcome-text{
+        margin-top: 2rem;
+    }
+}
+.welcome{
+    font-size: 3rem;
+}
+@media  screen  and (max-width: 700px) {
+    .welcome{
+        font-size: 1.5rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .battery-welcome-text{
+        font-size: 2rem;
+    }
+}
+
+h1{
+    font-size: 4rem;
+    font-family: fantasy;
+    color: rgb(18, 168, 168);
+    
+}
+@media  screen  and (max-width: 700px) {
+    h1{
+        font-size: 2rem;
+    }
+}
+
+.battery-sample-text{
+    font-size: 1.2rem;
+}
+@media  screen  and (max-width: 700px) {
+    .battery-sample-text{
+        font-size: 1.3rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .battery-sample-text{
+        font-size: 2rem;
+    }
+}
+/* hero section ends */
+
+/* battery lab cheker section */
+.battery-check-lab{
+    margin: 1rem 0;
+}
+
+.battery-text{
+    font-size: 1.5rem;
+    font-family: monospace ;
+    text-align: justify;
+}
+@media  screen  and (max-width: 700px) {
+    .battery-text{
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1500px) {
+    .battery-text{
+        font-size: 1.8rem;
+    }
+}
+
+.battery-lab{
+    margin-top: 3rem;
+    background-color: rgb(250, 217, 217);
+    padding: 1rem;
+    text-align: center;
+    width: 60%;
+    box-shadow: 0px 5px 100px 5px rgba(26, 25, 25, 0.534);
+    border-radius: 10px;
+    height: 80vh;
+    margin-left: 10rem;
+    position: relative;
+}
+@media  screen  and (max-width: 700px) {
+    .battery-lab{
+        width: 100%;
+        margin-left: 0;
+        height: 70vh;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .battery-lab{
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.8rem;
+        height: 80vh;
+    }
+}
+
+.form{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+    margin: 1rem;
+    position: relative;
+}
+label{
+    font-size: 1.5rem;
+    margin: 0 2rem;
+}
+@media  screen  and (max-width: 700px) {
+    label{
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    label{
+        font-size: 2.2rem;
+    }
+}
+
+.hint{
+    position: absolute;
+    font-size: 1rem;
+    width: 10rem;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 15px;
+    padding: .5rem;
+    top: 1rem;
+    right: 2rem;
+    visibility: hidden;
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .hint{
+        width: 15rem;
+        font-size: 2rem;
+    }
+}
+
+.help{
+    position: absolute;
+    top: .5rem;
+    right: 6rem;
+    color: black;
+    text-transform: capitalize;
+    display: none;
+}
+b{
+    color: red;
+}
+@media  screen  and (max-width: 700px) {
+    .help{
+        right: 0;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .help{
+        top: 2rem;
+        right: 0;
+    }
+}
+
+span{
+    color: #037fff;
+    cursor: pointer;
+}
+
+
+#input-months, #input-year, #input-capacity{
+    margin: 1rem 0;
+    padding: .5rem;
+    width: 50%;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    border: 4px solid #037fff;
+    background: black;
+    color: white;
+}
+@media  screen  and (max-width: 700px) {
+    #input-months,
+    #input-year,
+    #input-capacity{
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    #input-months,
+    #input-year,
+    #input-capacity{
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+#input-months:focus,
+#input-year:focus,
+#input-capacity:focus{
+    background: white;
+    color: black;
+    border: 4px solid #00453f;
+    animation: scale .3s;
+    width: 60%;
+
+}
+@media  screen  and (max-width: 700px) {
+    #input-months:focus,
+    #input-year:focus,
+    #input-capacity:focus{
+        width: 100%;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    #input-months:focus,
+    #input-year:focus,
+    #input-capacity:focus{
+        width: 100%;
+    }
+}
+@keyframes scale {
+    from{
+        transform: scale(.5);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+.submit-btn{
+    border: none;
+    display: block;
+    background: #037fff;
+    padding: .7rem;
+    width: 10rem;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .submit-btn{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
+.load .submit-btn{
+    opacity: .2;
+}
+.submit-btn:hover{
+    background-color: transparent;
+    border: 2px solid #037fff;
+    color: black;
+}
+.loading{
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+.fa-spinner{
+    color: red;
+    font-size: 1.8rem;
+    margin: 0 .5rem;
+    animation: spin .8s infinite linear;
+}
+
+
+.load .loading {
+    display: block;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.output-test{
+    background: rgb(70, 1, 1);
+    box-shadow: 0px 5px 7px 20px black;
+    width: 60%;
+    margin: 2rem 0 0 10rem;
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 1.3;
+    display: none;
+    position: absolute;
+    top: 5rem;
+    color: white;
+}
+#output-used-total{
+    color: red;
+}
+#output-remaining{
+    color: green;
+}
+#output-used-per-day{
+    color: rgb(241, 200, 13);
+}
+@media  screen  and (max-width: 700px) {
+    .output-test{
+        font-size: 1rem;
+        margin-left: 1rem;
+        width: 80%;
+        line-height: 1.5;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .output-test{
+        font-size: 2rem;
+        width: 90%;
+        margin-left: 1.5rem;
+    }
+}
+/* battery lab cheker section ends*/
+
+/* the developer */
+.developer-image{
+    display: flex;
+    margin: 1rem;
+    position: relative;
+}
+
+.dev-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.dev-name{
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #037fff;
+}
+@media  screen  and (max-width: 700px) {
+    .dev-name{
+        font-size: 1.5rem;
+    }
+}
+
+.dev-text{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+@media  screen  and (max-width: 700px) {
+    .dev-text {
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .dev-text {
+        font-size: 2rem;
+    }
+}
+/* the developer ends*/
+
+/* about the website */
+h5{
+    color: #037fff;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+}
+@media  screen  and (max-width: 700px) {
+    h5 {
+        font-size: 1.5rem;
+    }
+}
+.about-text{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+@media  screen  and (max-width: 700px) {
+    .about-text {
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .about-text {
+        font-size: 2rem;
+    }
+}
+/* about the website ends*/
+
+/* footer */
+.creator{
+    display: flex;
+    justify-content: space-between;
+}
+@media  (min-width: 700px) and (max-width: 1300px) {
+    .creator {
+        font-size: 2rem;
+    }
+}
+
+.back-to-up{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(119, 36, 84);
+    text-align: center;
+    padding-top: .8rem;
+}
+
+.backtoup .fas{
+    color: white;
+    font-size: 1.2rem;
+    animation: up 2s infinite;
+}
+
+.back-to-up:hover{
+    background: #037fff;
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}
+/* footer ends*/
