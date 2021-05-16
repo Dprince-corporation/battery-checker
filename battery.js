@@ -65,10 +65,10 @@ const inputYear = document.getElementById('input-year');
 const submitBtn = document.querySelector('.submit-btn');
 const showOutputBox = document.querySelector('.output-test');
 const form = document.querySelector('form');
-const outputCapacity = document.getElementById('output-capacity');
-const outputRemaining = document.getElementById('output-remaining');
-const outputUsedTotal = document.getElementById('output-used-total');
-const outputTotalDay = document.getElementById('output-used-per-day');
+let outputCapacity = document.getElementById('output-capacity');
+let outputRemaining = document.getElementById('output-remaining');
+let outputUsedTotal = document.getElementById('output-used-total');
+let outputTotalDay = document.getElementById('output-used-per-day');
 
 
 //create full battery life
@@ -78,7 +78,7 @@ let fullBatteryCapacity = [];
 let totalMonthsUsed = [];
 
 //create used year if months is not present
-const totalYearUsed = [];
+let totalYearUsed = [];
 
 
 //create output result on submit btn
@@ -96,54 +96,55 @@ submitBtn.addEventListener('click', (e) => {
     const remainingBatteryCapacity = fullBatteryCapacity - totalMonthsUsed * 2;
     const remainingBatteryCapacityTwo = fullBatteryCapacity - totalYearUsed * 2;
     
+    //check if inputs is not empty
+            if (totalMonthsUsed != "0" ) {
+                // determine remaining battery power
+                if (fullBatteryCapacity != remainingBatteryCapacity) {
 
-    if (totalMonthsUsed != "0") {
-        // determine remaining battery power
-        if (fullBatteryCapacity != remainingBatteryCapacity) {
+                    const remainingBatteryLife = remainingBatteryCapacity % fullBatteryCapacity;
 
-            let remainingBatteryLife = remainingBatteryCapacity % fullBatteryCapacity;
+                    //pass in calaculated battery test into the document
+                    outputCapacity.innerText = `${fullBatteryCapacity} mAh`;
 
-            //pass in calaculated battery test into the document
-            outputCapacity.innerText = `${fullBatteryCapacity} mAh`;
+                    //calculate what was lost both in days and pass it into the document
+                    let lostBatteryLife = remainingBatteryLife - fullBatteryCapacity;
+                    outputTotalDay.innerText = `${totalMonthsUsed} days`;
 
-            //calculate what was lost both in days and pass it into the document
-            let lostBatteryLife = remainingBatteryLife - fullBatteryCapacity;
-            outputTotalDay.innerText = `${totalMonthsUsed} days`;
+                    // determine if the user battery has finished then set battery remainder back to 0
+                    if (remainingBatteryLife < 0) {
+                        outputRemaining.innerText = `${0} mAh`;
+                        outputUsedTotal.innerText = `${fullBatteryCapacity} mAh`;
+                    } else {
+                        outputRemaining.innerText = `${remainingBatteryLife} mAh`;
+                        outputUsedTotal.innerText = `${lostBatteryLife} mAh`;
+                    }
+                    
+                
+                }
+            } else if(totalMonthsUsed = "0" ){
+                if (fullBatteryCapacity != remainingBatteryCapacityTwo) {
+                    const remainingBatteryLife = remainingBatteryCapacityTwo % fullBatteryCapacity;
 
-            // determine if the user battery has finished then set battery remainder back to 0
-            if (remainingBatteryLife < 0) {
-                outputRemaining.innerText = `${0} mAh`;
-                outputUsedTotal.innerText = `${fullBatteryCapacity} mAh`;
-            } else {
-                outputRemaining.innerText = `${remainingBatteryLife} mAh`;
-                outputUsedTotal.innerText = `${lostBatteryLife} mAh`;
+                    //pass in calaculated battery test into the document
+                    outputCapacity.innerText = `${fullBatteryCapacity} mAh`;
+
+
+                    //calculate what was lost both in days and pass it into the document
+                    let lostBatteryLife = remainingBatteryLife - fullBatteryCapacity;
+                    outputTotalDay.innerText = `${totalYearUsed} days`;
+                    
+                    // determine if the user battery has finished then set battery remainder back to 0
+                    if (remainingBatteryLife < 0 ) {
+                        outputRemaining.innerText = `${0} mAh`;
+                        outputUsedTotal.innerText = `${fullBatteryCapacity} mAh`;
+                    } else {
+                        outputUsedTotal.innerText = `${lostBatteryLife} mAh`;
+                        outputRemaining.innerText = `${remainingBatteryLife} mAh`;
+                    }
+                
+                }
             }
-            
-        
-        }
-    } else if(totalMonthsUsed = "0" ){
-        if (fullBatteryCapacity != remainingBatteryCapacityTwo) {
-            const remainingBatteryLife = remainingBatteryCapacityTwo % fullBatteryCapacity;
 
-            //pass in calaculated battery test into the document
-            outputCapacity.innerText = `${fullBatteryCapacity} mAh`;
-
-
-            //calculate what was lost both in days and pass it into the document
-            let lostBatteryLife = remainingBatteryLife - fullBatteryCapacity;
-            outputTotalDay.innerText = `${totalYearUsed} days`;
-            
-            // determine if the user battery has finished then set battery remainder back to 0
-            if (remainingBatteryLife < 0) {
-                outputRemaining.innerText = `${0} mAh`;
-                outputUsedTotal.innerText = `${fullBatteryCapacity} mAh`;
-            } else {
-                outputUsedTotal.innerText = `${lostBatteryLife} mAh`;
-                outputRemaining.innerText = `${remainingBatteryLife} mAh`;
-            }
-        
-        }
-    }
     form.classList.add('load');
     showOutBox(3);
     inputTotalCapacity.value = "";

@@ -43,7 +43,7 @@ body{
     margin-top: .5rem;
     list-style: none;
 }
-@media  screen  and (max-width: 900px) {
+@media  screen  and (max-width: 700px) {
     .navbar{
         position: relative;
         padding: 0;
@@ -65,7 +65,7 @@ body{
         display: block;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .navbar{
         position: relative;
         padding: 0;
@@ -101,9 +101,9 @@ body{
     font-size: 1.5rem;
     font-family: cursive;
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .nav-link, .follow-link{
-font-size: 2rem;
+        font-size: 2rem;
     }
 }
 .nav-link:hover, .follow-link:hover{
@@ -121,7 +121,7 @@ font-size: 2rem;
         margin-top: 1rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .follow-list{
         text-align: center;
         justify-content: center;
@@ -142,7 +142,7 @@ font-size: 2rem;
         display: block;
     }
 }
-@media  (min-width: 650px) and (max-width: 1300px) {
+@media  (min-width: 650px) and (max-width: 1200px) {
     .menu-toggler{
         margin-left: auto;
         padding-right: 2rem;
@@ -176,16 +176,16 @@ font-size: 2rem;
         height: 60vh;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .hero{
-        height: 60vh;
+        height: 50vh;
     }
 }
 .battery-welcome-text{
     margin-top: 4rem;
     color: white;
     font-family: cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 @media  screen  and (max-width: 700px) {
     .battery-welcome-text{
@@ -200,9 +200,9 @@ font-size: 2rem;
         font-size: 1.5rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .battery-welcome-text{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -214,19 +214,31 @@ h1{
 }
 @media  screen  and (max-width: 700px) {
     h1{
+        font-size: 1.5rem;
+    }
+
+    .battery-focus-text{
         font-size: 2rem;
     }
 }
+@media  (min-width: 700px) and (max-width: 1200px) {
+    h1{
+        font-size: 1.9rem;
+    }
 
+    .battery-focus-text{
+        font-size: 1.8rem;
+    }
+}
 .battery-sample-text{
     font-size: 1.2rem;
 }
 @media  screen  and (max-width: 700px) {
     .battery-sample-text{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .battery-sample-text{
         font-size: 2rem;
     }
@@ -250,7 +262,7 @@ h1{
 }
 @media  (min-width: 700px) and (max-width: 1500px) {
     .battery-text{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -262,7 +274,7 @@ h1{
     width: 60%;
     box-shadow: 0px 5px 100px 5px rgba(26, 25, 25, 0.534);
     border-radius: 10px;
-    height: 80vh;
+    /* height: 80vh; */
     margin-left: 10rem;
     position: relative;
 }
@@ -270,15 +282,15 @@ h1{
     .battery-lab{
         width: 100%;
         margin-left: 0;
-        height: 70vh;
+        /* height: 70vh; */
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .battery-lab{
         width: 100%;
         margin-left: 0;
         font-size: 1.8rem;
-        height: 80vh;
+        /* height: 80vh; */
     }
 }
 
@@ -296,12 +308,12 @@ label{
 }
 @media  screen  and (max-width: 700px) {
     label{
-        font-size: 1rem;
+        font-size: .8rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     label{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -317,7 +329,7 @@ label{
     right: 2rem;
     visibility: hidden;
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .hint{
         width: 15rem;
         font-size: 2rem;
@@ -340,7 +352,7 @@ b{
         right: 0;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .help{
         top: 2rem;
         right: 0;
@@ -368,17 +380,17 @@ span{
     #input-months,
     #input-year,
     #input-capacity{
-        width: 80%;
-        padding: 1rem;
-        font-size: 1.2rem;
+        width: 90%;
+        padding: .5rem;
+        font-size: 1rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     #input-months,
     #input-year,
     #input-capacity{
         width: 80%;
-        padding: 1rem;
+        padding: .5rem;
         font-size: 1.5rem;
     }
 }
@@ -400,11 +412,11 @@ span{
         width: 100%;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     #input-months:focus,
     #input-year:focus,
     #input-capacity:focus{
-        width: 100%;
+        width: 90%;
     }
 }
 @keyframes scale {
@@ -427,10 +439,10 @@ span{
     color: white;
     font-size: 1rem;
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .submit-btn{
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: .8rem;
     }
 }
 .load .submit-btn{
@@ -477,6 +489,7 @@ span{
     position: absolute;
     top: 5rem;
     color: white;
+    padding: .5rem;
 }
 #output-used-total{
     color: red;
@@ -492,12 +505,12 @@ span{
         font-size: 1rem;
         margin-left: 1rem;
         width: 80%;
-        line-height: 1.5;
+        line-height: 1.2;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .output-test{
-        font-size: 2rem;
+        font-size: 1.2rem;
         width: 90%;
         margin-left: 1.5rem;
     }
@@ -510,11 +523,16 @@ span{
     margin: 1rem;
     position: relative;
 }
-
 .dev-img{
     width: 60px;
     height: 60px;
     border-radius: 100%;
+}
+@media screen and (max-width: 700px) {
+    .dev-img{
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .dev-name{
@@ -527,7 +545,7 @@ span{
 }
 @media  screen  and (max-width: 700px) {
     .dev-name{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -537,12 +555,12 @@ span{
 }
 @media  screen  and (max-width: 700px) {
     .dev-text {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .dev-text {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 /* the developer ends*/
@@ -556,7 +574,7 @@ h5{
 }
 @media  screen  and (max-width: 700px) {
     h5 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 .about-text{
@@ -568,9 +586,9 @@ h5{
         font-size: 1rem;
     }
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media  (min-width: 700px) and (max-width: 1200px) {
     .about-text {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 /* about the website ends*/
@@ -580,9 +598,14 @@ h5{
     display: flex;
     justify-content: space-between;
 }
-@media  (min-width: 700px) and (max-width: 1300px) {
+@media screen and (max-width: 700px) {
+    .creator{
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 700px) and (max-width: 1200px) {
     .creator {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -594,11 +617,22 @@ h5{
     text-align: center;
     padding-top: .8rem;
 }
+@media screen and (max-width: 700px) {
+    .back-to-up{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
 
 .backtoup .fas{
     color: white;
     font-size: 1.2rem;
     animation: up 2s infinite;
+}
+@media screen and (max-width: 700px) {
+    .backtoup .fas{
+        font-size: .8rem;
+    }
 }
 
 .back-to-up:hover{
@@ -608,14 +642,14 @@ h5{
 @keyframes up {
     0%{
         opacity: 0;
-        transform: translateY(2rem);
+        transform: translateY(.8rem);
     }
     50%{
         opacity: 1;
     }
     100%{
         opacity: 0;
-        transform: translateY(-2rem);
+        transform: translateY(-1rem);
     }
 }
 /* footer ends*/
